@@ -7,8 +7,9 @@
 .container {
     display: flex;
     flex-direction: column;
-    width: 960px;
-    height: 960px;
+    width: 640px;
+    height: 640px;
+    margin: 0 auto;
 }
 
 .row {
