@@ -1,9 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container {
     display: flex;
     flex-direction: column;
+    width: 960px;
+    height: 960px;
 }
 
 .row {
     display: flex;
     flex-direction: row;
+}
+
+.square {
+    border: 1px solid black;
 }
