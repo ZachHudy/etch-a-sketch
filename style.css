@@ -36,8 +36,9 @@ body {
     flex-direction: row;
 }
 
-.square {
-    border: 1px solid black
+.container {
+    border: 1px solid black;
+    margin-top: 100px;
 }
 
 .active {
