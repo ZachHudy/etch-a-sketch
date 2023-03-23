@@ -19,6 +19,9 @@ window.addEventListener('mouseup', () => {
     drawActive = false;
 });
 
+// create the initial grid
+createGrid(16);
+
 // create function to create the grid; accepts n as an argument, which will decide number of rows and columns
 function createGrid(n) {
     for (let i = 0; i < n; i++) {
@@ -37,9 +40,11 @@ function createGrid(n) {
 }
 
 function changeColor(e) {
-    if (!drawActive) return;
+    if (e.type === 'mouseover' && !drawActive) return;
     if (mode === 'bAndW') {
         e.target.style.backgroundColor = 'black';
+    } else if (mode === 'erase') {
+        e.target.style.backgroundColor = 'white';
     }
     
 }
