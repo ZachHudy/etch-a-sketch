@@ -1,17 +1,15 @@
 const container = document.querySelector('.container');
 const body = document.querySelector('body');
 let drawActive = false;
-// container.addEventListener('mousedown', () => {
-//     drawActive = true;
-// });
-// container.addEventListener('mouseup', () => {
-//     drawActive = false;
-// });
-body.addEventListener('mousedown', () => {
+container.addEventListener('mousedown', (e) => {
     drawActive = true;
+    e.preventDefault();
+    console.log(drawActive);
+
 });
-body.addEventListener('mouseup', () => {
+container.addEventListener('mouseup', () => {
     drawActive = false;
+    console.log(drawActive);
 });
 
 
@@ -23,12 +21,11 @@ for (let i = 0; i < 16; i++) {
         newSquare.classList.add('square');
         newSquare.style.cssText = `height: ${640 / 16}px; width: ${640 / 16}px;`
         newSquare.addEventListener('mousedown', (e) => {
-            e.target.classList.toggle('active');
+            e.target.style.backgroundColor = 'black';
         });
         newSquare.addEventListener('mouseover', (e) => {
-            if (drawActive){
-                e.target.classList.toggle('active');
-            }
+            if (!drawActive) return;
+            e.target.style.backgroundColor = 'black';
         });
         newRow.appendChild(newSquare);
     }
