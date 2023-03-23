@@ -14,13 +14,13 @@ window.addEventListener('mouseup', () => {
 });
 
 function createGrid(n) {
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < n; i++) {
         const newRow = document.createElement('div');
         newRow.classList.add('row');
-        for (let j = 0; j < 16; j++) {
+        for (let j = 0; j < n; j++) {
             const newSquare = document.createElement('div');
             newSquare.classList.add('square');
-            newSquare.style.cssText = `height: ${container.clientHeight / 16}px; width: ${container.clientWidth / 16}px;`
+            newSquare.style.cssText = `height: ${container.clientHeight / n}px; width: ${container.clientWidth / n}px;`
             newSquare.addEventListener('mousedown', (e) => {
                 e.target.style.backgroundColor = 'black';
             });
