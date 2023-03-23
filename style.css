@@ -4,6 +4,25 @@
     box-sizing: border-box;
 }
 
+/*
+====================
+Grid and Setup
+====================
+*/
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+}
+
+.options {
+    width: 20%;
+}
+
 .container {
     display: flex;
     flex-direction: column;
