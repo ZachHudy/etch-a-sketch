@@ -1,13 +1,13 @@
 const container = document.querySelector('.container');
 const body = document.querySelector('body');
 let drawActive = false;
-container.addEventListener('mousedown', (e) => {
+body.addEventListener('mousedown', (e) => {
     drawActive = true;
     e.preventDefault();
     console.log(drawActive);
 
 });
-container.addEventListener('mouseup', () => {
+window.addEventListener('mouseup', () => {
     drawActive = false;
     console.log(drawActive);
 });
