@@ -53,6 +53,11 @@ function changeColor(e) {
         e.target.style.backgroundColor = 'black';
     } else if (mode === 'erase') {
         e.target.style.backgroundColor = 'white';
+    } else if (mode === 'rainbow') {
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        e.target.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 1)`
     }
     
 }
