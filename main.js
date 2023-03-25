@@ -1,8 +1,11 @@
 // select container of squares
 const container = document.querySelector('.container');
-// select entire body of page
 const body = document.querySelector('body');
 const slider = document.querySelector('#slider');
+const rainbowBtn = document.querySelector('#rainbow');
+const bAndWBtn = document.querySelector('#black-n-white');
+const eraseBtn = document.querySelector('#erase');
+const modeBtns = document.querySelectorAll('.btn');
 // set boolean for dragging depending on mousedown/mouseup
 let drawActive = false;
 // set default number of square grid (rows and columns both equal n)
@@ -11,10 +14,17 @@ let n = 16;
 let mode = 'bAndW';
 
 // toggle drawActive true status when mouse is depressed inside body
-document.body.onmousedown = () => (drawActive = true);
+body.addEventListener('mousedown', () => {
+    drawActive = true;
+});
 // toggle drawActive false when mouse is released anywhere on screen
-document.body.onmouseup = () => (drawActive = false);
+window.addEventListener('mouseup', () => {
+    drawActive = false;
+});
 
+modeBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => mode = e.target.value);
+});
 
 
 // create the initial grid
