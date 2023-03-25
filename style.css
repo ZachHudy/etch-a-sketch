@@ -37,6 +37,7 @@ header {
     height: 640px;
     margin: 0 auto;
     background-color: white;
+    user-select: none;
 }
 
 .row {
