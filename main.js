@@ -1,5 +1,7 @@
 // select container of squares
 const container = document.querySelector('.container');
+
+// select other elements on the body
 const body = document.querySelector('body');
 const slider = document.querySelector('#slider');
 const rainbowBtn = document.querySelector('#rainbow');
@@ -62,4 +64,7 @@ function changeColor(e) {
     
 }
 
-
+resetGrid() {
+    container.innerHTML = '';
+    createGrid(n);
+}
