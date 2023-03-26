@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /*
@@ -14,12 +15,12 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #EDEDED;
+    padding-left: 10px;
 }
 
 header {
     height: 75px;
     background-color: #EDEDED;
-    border-bottom: 2px solid lightgray
 }
 
 .main {
@@ -28,6 +29,7 @@ header {
 
 .options {
     width: 20%;
+    margin-right: 5%;
 }
 
 .container {
@@ -35,9 +37,23 @@ header {
     flex-direction: column;
     width: 640px;
     height: 640px;
-    margin: 0 auto;
     background-color: white;
     user-select: none;
+}
+
+#mode-select {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+#size-select h2 {
+    margin-bottom: 5px;
+}
+
+.btn {
+    flex: initial;
 }
 
 .row {
@@ -47,7 +63,6 @@ header {
 
 .container {
     border: 1px solid black;
-    margin-top: 50px;
 }
 
 .active {
