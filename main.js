@@ -64,7 +64,7 @@ function changeColor(e) {
     
 }
 
-resetGrid() {
+function resetGrid() {
     container.innerHTML = '';
     createGrid(n);
 }
