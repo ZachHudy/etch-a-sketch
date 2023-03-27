@@ -9,6 +9,7 @@ const bAndWBtn = document.querySelector('#black-n-white');
 const eraseBtn = document.querySelector('#erase');
 const modeBtns = document.querySelectorAll('.btn');
 const sizeDisplay = document.querySelector('#current-size');
+const clearBtn = document.querySelector('#clear-btn');
 // set boolean for dragging depending on mousedown/mouseup
 let drawActive = false;
 // set default number of square grid (rows and columns both equal n)
@@ -34,6 +35,10 @@ slider.addEventListener('input', () => {
     resetGrid();
 })
 
+clearBtn.addEventListener('click', () => {
+    mode = 'bAndW';
+    resetGrid();
+});
 
 // create the initial grid
 createGrid(16);
