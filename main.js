@@ -8,6 +8,7 @@ const rainbowBtn = document.querySelector('#rainbow');
 const bAndWBtn = document.querySelector('#black-n-white');
 const eraseBtn = document.querySelector('#erase');
 const modeBtns = document.querySelectorAll('.btn');
+const sizeDisplay = document.querySelector('#current-size');
 // set boolean for dragging depending on mousedown/mouseup
 let drawActive = false;
 // set default number of square grid (rows and columns both equal n)
@@ -28,6 +29,11 @@ modeBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => mode = e.target.value);
 });
 
+slider.addEventListener('input', () => {
+    n = slider.value;
+    resetGrid();
+})
+
 
 // create the initial grid
 createGrid(16);
@@ -47,6 +53,7 @@ function createGrid(n) {
         }
         container.appendChild(newRow);
     }
+    sizeDisplay.textContent = `${n} x ${n}`;
 }
 
 function changeColor(e) {
