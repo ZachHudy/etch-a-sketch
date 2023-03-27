@@ -2,6 +2,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/*
+====================
+Grid and Setup
+====================
+*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #EDEDED;
+    padding-left: 10px;
+}
+
+header {
+    height: 75px;
+    background-color: #EDEDED;
+}
+
+.main {
+    display: flex;
+}
+
+.options {
+    width: 20%;
+    margin-right: 5%;
 }
 
 .container {
@@ -9,7 +37,47 @@
     flex-direction: column;
     width: 640px;
     height: 640px;
-    margin: 0 auto;
+    background-color: white;
+    user-select: none;
+}
+
+#mode-select {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+#size-select {
+    padding-right: 50%;
+    margin-bottom: 20px;
+}
+
+#size-select h2 {
+    margin-bottom: 5px;
+}
+
+#slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: darkgrey;
+    outline: none;
+    border-radius: 5px;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background: grey;
+    border-radius: 50%;
+}
+
+.btn {
+    flex: initial;
 }
 
 .row {
@@ -17,8 +85,8 @@
     flex-direction: row;
 }
 
-.square {
-    border: 1px solid black
+.container {
+    border: 1px solid black;
 }
 
 .active {

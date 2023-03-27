@@ -2,15 +2,37 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
+        <title>Etch-A-Sketch</title>
     </head>
     <body>
-        <div class="options">
-
-        </div>
-        <div class="container">
-
-        </div>
+        <header>
+            <h1>Etch-A-Sketch</h1>
+        </header>
+        <section class="main">
+            <div class="options">
+                <div id="mode-select">
+                    <h3>Select Mode: </h3>
+                    <button class="btn" id="black-n-white" value="bAndW">Black and White</button>
+                    <button class="btn" id="rainbow" value="rainbow">Rainbow</button>
+                    <button class="btn" id="erase" value="erase">Erase</button>
+                </div>
+                <div id="size-select">
+                    <h3>Select Size: </h3>
+                    <input type="range" id="slider" min="4" max="100" value="16">
+                    <h4 id="current-size"></h4>
+                </div>
+                <div class="clear">
+                    <button class="btn" id="clear-btn">Clear Grid</button>
+                </div>
+            </div>
+            <div class="container">
+    
+            </div>
+        </section>
         <script src="./main.js"></script>
     </body>
 </html>
